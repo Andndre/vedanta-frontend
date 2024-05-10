@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="22dp"
+    android:layout_marginEnd="22dp"
+    android:padding="8dp">
+
+
+    <!-- Pesan pengirim (sender) -->
+
+
+    <TextView
+        android:id="@+id/senderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/senderMessage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/senderMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/message_background_sent"
+        android:padding="10dp"
+        android:text="This is a message from the sender."
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senderName"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHorizontal_bias="1.0" />
+
+    <!-- Tanggal pesan pengirim -->
+
+    <!-- Nama penerima -->
+
+    <TextView
+        android:id="@+id/senderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/senderMessage"
+        app:layout_constraintTop_toBottomOf="@+id/senderMessage" />
+
+    <TextView
+        android:id="@+id/receiverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bot"
+        android:fontFamily="@font/poppins_bold"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/receiverMessage"
+        app:layout_constraintTop_toBottomOf="@id/senderDate" />
+
+    <!-- Pesan penerima (receiver) -->
+    <TextView
+        android:id="@+id/receiverMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/message_background_sent"
+        android:padding="10dp"
+        android:text="This is a message from the receiver."
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receiverName"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <!-- Tanggal pesan penerima -->
+    <TextView
+        android:id="@+id/receiverDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@+id/receiverMessage"
+        app:layout_constraintTop_toBottomOf="@+id/receiverMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

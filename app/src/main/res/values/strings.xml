@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Brahmacari Learning</string>
+    <string name="choose_role">PILIH PERAN KAMU</string>
+    <string name="role_teacher">Pengajar</string>
+    <string name="role_student">Pelajar</string>
+    <string name="login_succeed">Your login succeed</string>
+    <string name="congrats">Congrats!</string>
+    <string name="next">Continue</string>
+    <string name="greeting">Hello %1$s</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+
+</resources>
