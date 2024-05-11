@@ -9,5 +9,13 @@
     <string name="greeting">Hello %1$s</string>
     <string name="drawer_open">Open drawer</string>
     <string name="drawer_close">Close drawer</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="masukan_email">Masukan Email</string>
+    <string name="masukan_kata_sandi">Masukan Kata Sandi</string>
+    <string name="belum_punya_akun">Belum Punya Akun?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="alamat_email">Alamat Email</string>
+    <string name="masuk">Masuk ke Akun</string>
 
 </resources>
