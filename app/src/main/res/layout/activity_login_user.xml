@@ -21,7 +21,7 @@
             android:layout_marginTop="50dp"
             android:fontFamily="@font/poppins_extra_bold"
             android:text="Masuk"
-            android:textSize="30dp"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/poppins_light"
             android:text="Login dan perbaiki tulisan Aksara Bali dengan Cambara sekarang!"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginStart="30dp"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintTop_toBottomOf="@+id/text_after_login"
             />
 
@@ -70,7 +70,7 @@
                 android:ems="10"
                 android:hint="Masukan Email"
                 android:fontFamily="@font/poppins_light"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:inputType="textEmailAddress"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
