@@ -114,47 +114,51 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textDontHaveAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_light"
-            android:text="Belum Punya Akun?"
-            android:textSize="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/textViewClickable"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+                android:id="@+id/textDontHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:text="Belum Punya Akun?"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewClickable"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginButton"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp" />
 
         <TextView
-            android:id="@+id/textViewClickable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="112dp"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Sign Up"
-            android:textColor="@color/blue"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textDontHaveAccount"
-            app:layout_constraintStart_toEndOf="@+id/textDontHaveAccount"
-            app:layout_constraintTop_toTopOf="@+id/textDontHaveAccount"
-            app:layout_constraintVertical_bias="0.0" />
+                android:id="@+id/textViewClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign Up"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textDontHaveAccount"
+                app:layout_constraintStart_toEndOf="@+id/textDontHaveAccount"
+                app:layout_constraintTop_toTopOf="@+id/textDontHaveAccount"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-            android:id="@+id/loginButton"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="32dp"
-            android:text="Login"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+                android:id="@+id/loginButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Login"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
 
 
 

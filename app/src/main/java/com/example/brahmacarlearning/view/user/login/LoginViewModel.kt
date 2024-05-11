@@ -7,7 +7,7 @@ import com.example.brahmacarlearning.repository.Repository
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val repository: Repository): ViewModel() {
-
+    
     fun login(email: String, password: String) = repository.login(email, password)
 
     fun saveSession(user: UserModel){
