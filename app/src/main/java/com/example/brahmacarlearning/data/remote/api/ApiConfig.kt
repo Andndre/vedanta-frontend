@@ -28,7 +28,7 @@ class ApiConfig {
                 .writeTimeout(60, TimeUnit.SECONDS) // Tingkatkan sesuai kebutuhan
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3000/api/")
+                .baseUrl("https://vedanta-pro.vercel.app/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

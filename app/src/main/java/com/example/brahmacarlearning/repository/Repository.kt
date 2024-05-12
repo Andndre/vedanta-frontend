@@ -190,10 +190,6 @@ class Repository private constructor(
         }
     }
 
-
-
-
-
     fun getSessionsChat() :LiveData<Result<List<SessionsItem>>> = liveData {
         emit(Result.Loading)
         try {
