@@ -10,6 +10,8 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
@@ -28,22 +30,23 @@ class LoginActivity : AppCompatActivity() {
     private val viewModel by viewModels<LoginViewModel> {
         ViewModelFactory.getInstance(this)
     }
-    private lateinit var binding: ActivityLoginUserBinding
 
     private lateinit var passwordEditText: CustomPasswordEditText
     private lateinit var loginButton: Button
     private lateinit var emailEditText: CustomEmailEditText
+    private lateinit var textViewClickable: TextView
+    private lateinit var progressBar: ProgressBar
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginUserBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_login_user)
 
-        emailEditText = binding.edLoginEmail
-        loginButton = binding.loginButton
-        passwordEditText = binding.edLoginPassword
-
+        emailEditText = findViewById(R.id.ed_login_email)
+        loginButton = findViewById(R.id.loginButton)
+        passwordEditText = findViewById(R.id.ed_login_password)
+        textViewClickable = findViewById(R.id.textViewClickable)
+        progressBar = findViewById(R.id.progressBar)
 
         //validasi email
         emailEditText.addTextChangedListener(object: TextWatcher {
@@ -79,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
 
         })
 
-        binding.textViewClickable.setOnClickListener{
+        textViewClickable.setOnClickListener{
             startActivity(Intent(this, RegisterActivity::class.java))
             finish()
         }
@@ -95,9 +98,9 @@ class LoginActivity : AppCompatActivity() {
 
         loginButton.isEnabled = password != null && password.toString().length >= 8 && email != null && validEmail
         if (!loginButton.isEnabled){
-            binding.loginButton.alpha = 0.3f
+            loginButton.alpha = 0.3f
         } else {
-            binding.loginButton.alpha = 1f
+            loginButton.alpha = 1f
         }
     }
 
@@ -115,9 +118,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.loginButton.setOnClickListener {
-            val email = binding.edLoginEmail.text.toString()
-            val password = binding.edLoginPassword.text.toString()
+        loginButton.setOnClickListener {
+            val email = emailEditText.text.toString()
+            val password = passwordEditText.text.toString()
             viewModel.login(email, password).observe(this) { result ->
                 if (result != null) {
                     when (result) {
@@ -170,7 +173,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showLoading(isLoading: Boolean){
-        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 }
